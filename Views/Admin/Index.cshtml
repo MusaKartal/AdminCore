@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+    string Name = Context.Session.GetString("Name");
+}
+
+<h1>ADmin</h1>
+
+<div>
+    <h1> selam @Name</h1>
+
+</div>
+
+<a asp-action="Logout" asp-controller="Account" > çıkış yap </a>
