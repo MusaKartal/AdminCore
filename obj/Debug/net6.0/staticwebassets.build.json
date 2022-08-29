@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aHRWBjztxKjorfTnTHxKTia7mPy4TUCbyPEngB5h41U=",
+  "Hash": "LaiSBeeUzcoZ+uvxJN+sTvC4N58dZXwyUihIaO6uo2A=",
   "Source": "AdminCore",
   "BasePath": "_content/AdminCore",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Musa\\Documents\\Musa Vs-Projects\\AdminCore\\AdminCore\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AdminCore.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Musa\\Documents\\Musa Vs-Projects\\AdminCore\\AdminCore\\wwwroot\\css\\cstyle.css",
+      "SourceId": "AdminCore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Musa\\Documents\\Musa Vs-Projects\\AdminCore\\AdminCore\\wwwroot\\",
+      "BasePath": "_content/AdminCore",
+      "RelativePath": "css/cstyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\cstyle.css"
     },
     {
       "Identity": "C:\\Users\\Musa\\Documents\\Musa Vs-Projects\\AdminCore\\AdminCore\\wwwroot\\css\\site.css",

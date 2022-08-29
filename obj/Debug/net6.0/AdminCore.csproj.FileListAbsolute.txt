@@ -259,3 +259,8 @@ C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\bin\Debug\net6.0\ru
 C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\obj\Debug\net6.0\staticwebassets\msbuild.AdminCore.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\obj\Debug\net6.0\staticwebassets\msbuild.build.AdminCore.props
+C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.AdminCore.props
+C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.AdminCore.props
+C:\Users\Musa\Documents\Musa Vs-Projects\AdminCore\AdminCore\obj\Debug\net6.0\staticwebassets.pack.json
