@@ -11,13 +11,12 @@ namespace AdminCore.Controllers
     [AdminFilter]
     public class AdminController : Controller
     {
-        
-      
-        private readonly IProduct _services;
-
+       
+       private readonly IProduct _productServices;
+       
        public AdminController(IProduct services)
         {
-            _services = services;
+            _productServices = services;
         }
 
         public IActionResult Index()
@@ -32,16 +31,22 @@ namespace AdminCore.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Product model)
+        public async Task<IActionResult> Create(IFormFile file,Product model)
         {
-            await  _services.CreateItem(model);
+            
+            
+            await _productServices.ImageUploadItem(file, model);
+                
+            
             return RedirectToAction("List");
         }
+
+       
 
         [HttpGet]
         public async Task <IActionResult> Details(int id )
         {
-            var result = await _services.GetProductById(id);
+            var result = await _productServices.GetProductById(id);
             return View(result); 
         }
 
@@ -50,37 +55,38 @@ namespace AdminCore.Controllers
         [HttpGet]
         public async  Task <IActionResult> List()
         {
-            var result = await _services.GetItemAll(); 
+            var result = await _productServices.GetItemAll(); 
 
             return View(result);
         }
 
         public async Task<IActionResult> Edit(int id)
         {
-            var product = await _services.GetProductById(id);
-
+            var product = await _productServices.GetProductById(id);
             return View(product);
         }
 
         [HttpPost]
-        public  async Task<IActionResult> Edit(int id,Product model)
+        public  async Task<IActionResult> Edit(IFormFile file,int id,Product model)
         {
            
-            await _services.UpdateItem(id,model);
+           await _productServices.ImageUpdateItem(file, id, model);
            return  RedirectToAction("List");
 
         }
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            var product = await _services.GetProductById(id);
+            var product = await _productServices.GetProductById(id);
             return View(product);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(Product model)
+        public async Task<IActionResult> Delete(int id ,Product model)
         {
-            await _services.DeleteItem(model.Id);
+
+            await _productServices.DeleteItem(id ,model); 
+                
             return RedirectToAction("List");
         }
 

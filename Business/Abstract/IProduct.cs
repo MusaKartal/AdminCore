@@ -8,9 +8,11 @@ namespace AdminCore.Business.Abstract
         Task<Product> GetProductById(int id);
         Task<Product> CreateItem(Product product);
         Task UpdateItem(int id,Product product);
-        Task DeleteItem(int id);
-        Task UploadItem(IFormFile file,Product product);
-        Task UploadUpdateItem(IFormFile file,int id, Product product);
+        Task DeleteItem(int id ,Product product);
+        Task ImageUploadItem(IFormFile file, Product product);
+        Task ImageUpdateItem(IFormFile file, int id, Product product);
+
+
 
     }
 }

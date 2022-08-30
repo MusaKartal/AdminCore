@@ -19,9 +19,24 @@ namespace AdminCore.Business.Concrete
             return product;
         }
 
-        public async Task DeleteItem(int id)
+        public async Task DeleteItem(int id, Product product)
         {
-            await _repository.Delete(id);
+             var item = await _repository.Get(id);             
+             var path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/ProductImages/{item.Photo}");
+            if (item.Photo == "NullPhoto.jpg") 
+            {
+             await _repository.Delete(product.Id);
+             
+            }
+            else
+            {
+                if (System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                }
+                await _repository.Delete(product.Id);
+            }
+            
 
         }
 
@@ -40,7 +55,8 @@ namespace AdminCore.Business.Concrete
             await _repository.Update(id, product);
         }
 
-        public async Task UploadItem(IFormFile file, Product product)
+       
+        public async Task ImageUploadItem(IFormFile file, Product product)
         {
 
             if (file != null)
@@ -58,10 +74,16 @@ namespace AdminCore.Business.Concrete
                 product.Photo = imageName;
                 await _repository.Add(product);
             }
+            else
+            { 
+                product.Photo = "NullPhoto.jpg";
+                await _repository.Add(product);   
+            }
         }
 
-        public async Task UploadUpdateItem(IFormFile file, int id, Product product)
+        public async Task ImageUpdateItem(IFormFile file, int id, Product product)
         {
+                
             var a = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/ProductImages/{product.Photo}");
 
             if (System.IO.File.Exists(a))
@@ -72,7 +94,7 @@ namespace AdminCore.Business.Concrete
             if (file == null)
             {
                 product.Photo = "NullPhoto.jpg";
-                await _repository.Update(id, product);
+                await _repository.Update(id,product);
             }
             else
             {
@@ -91,6 +113,7 @@ namespace AdminCore.Business.Concrete
 
             }
 
+
         }
     }
-}
+    }
