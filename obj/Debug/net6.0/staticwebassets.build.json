@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LaiSBeeUzcoZ+uvxJN+sTvC4N58dZXwyUihIaO6uo2A=",
+  "Hash": "/4LIEyGnegB0uaELLitEm5HNSx9xF5WXmpNOrLoKERU=",
   "Source": "AdminCore",
   "BasePath": "_content/AdminCore",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Musa\\Documents\\Musa Vs-Projects\\AdminCore\\AdminCore\\wwwroot\\ProductImages\\NullPhoto.jpg",
+      "SourceId": "AdminCore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Musa\\Documents\\Musa Vs-Projects\\AdminCore\\AdminCore\\wwwroot\\",
+      "BasePath": "_content/AdminCore",
+      "RelativePath": "ProductImages/NullPhoto.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ProductImages\\NullPhoto.jpg"
     }
   ]
 }

@@ -22,8 +22,12 @@ builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 builder.Services.AddScoped<IProduct, ProductManager>();
 
 //Sessions
-builder.Services.AddSession();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromSeconds(60);
+});
 builder.Services.AddDistributedMemoryCache();
+
 
 var app = builder.Build();
 

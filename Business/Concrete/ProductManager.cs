@@ -40,14 +40,57 @@ namespace AdminCore.Business.Concrete
             await _repository.Update(id, product);
         }
 
-        public Task UploadItem(IFormFile file, Product product)
+        public async Task UploadItem(IFormFile file, Product product)
         {
-            throw new NotImplementedException();
+
+            if (file != null)
+            {
+                string imageExtension = Path.GetExtension(file.FileName);
+
+                string imageName = Guid.NewGuid() + imageExtension;
+
+                string path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/ProductImages/{imageName}");
+
+                using var stream = new FileStream(path, FileMode.Create);
+
+                file.CopyToAsync(stream);
+
+                product.Photo = imageName;
+                await _repository.Add(product);
+            }
         }
 
-        public Task UploadUpdateItem(IFormFile file, int id, Product product)
+        public async Task UploadUpdateItem(IFormFile file, int id, Product product)
         {
-            throw new NotImplementedException();
+            var a = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/ProductImages/{product.Photo}");
+
+            if (System.IO.File.Exists(a))
+            {
+                System.IO.File.Delete(a);
+            }
+
+            if (file == null)
+            {
+                product.Photo = "NullPhoto.jpg";
+                await _repository.Update(id, product);
+            }
+            else
+            {
+                string imageExtension = Path.GetExtension(file.FileName);
+
+                string imageName = Guid.NewGuid() + imageExtension;
+
+                string path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/ProductImages/{imageName}");
+
+                using var stream = new FileStream(path, FileMode.Create);
+
+                file.CopyToAsync(stream);
+
+                product.Photo = imageName;
+                await _repository.Update(id, product);
+
+            }
+
         }
     }
 }

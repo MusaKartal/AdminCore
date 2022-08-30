@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AdminCore.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Musa\\Documents\\Musa Vs-Projects\\AdminCore\\AdminCore\\wwwroot\\ProductImages\\NullPhoto.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\NullPhoto.jpg"
+    },
+    {
       "Id": "C:\\Users\\Musa\\Documents\\Musa Vs-Projects\\AdminCore\\AdminCore\\wwwroot\\css\\cstyle.css",
       "PackagePath": "staticwebassets\\css\\cstyle.css"
     },
